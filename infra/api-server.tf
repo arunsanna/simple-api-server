@@ -49,11 +49,15 @@ resource "aws_instance" "api-server" {
   vpc_security_group_ids = ["${aws_security_group.api-server-sg.id}"]
   subnet_id = "${aws_subnet.priv.id}"
   associate_public_ip_address = false
-
+  user_data            = "${data.template_file.api_server_userdata.rendered}"
   tags {
     CreatedBy      = "${var.owner}"
     Name           = "${var.project}-API-Server"
     Project        = "${var.project}"
     Owner          = "${var.owner}"
   }
+}
+
+data "template_file" "api_server_userdata" {
+  template = "${file("${path.module}/user-data/api-app.sh.tpl")}"
 }

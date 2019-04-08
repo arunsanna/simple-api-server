@@ -1,16 +1,9 @@
 #!bin/bash
 
-# download and install git
-sudo yum -y install git &&
+# create ssh-key pair if there is not keypair in the local machine using awscli
+aws ec2 import-key-pair --key-name "api-server" --public-key-material file://~/.ssh/my-key.pub
 
-# clone the repo
-git clone &&
+# get the public ip-address
 
-# install pip
-sudo easy-install pip &&
-
-# install flask restful-api
-sudo pip install flask-restful-api &&
-
-# now run the app code.
-python app.py
+# run the terraform passing ip-address, profile, keyname
+ terraform apply --auto-approve -var="require-bastion=true" -var="profile=$PROFILE" -var="keyname-$keyname" 
