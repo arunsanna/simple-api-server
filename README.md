@@ -25,10 +25,10 @@ All application logs, POST requests and responses are logged to location `/var/l
   * `git clone git@github.com:arunsanna/simple-api-server.git` 
 
 * Deploy the infrastructure
-  * Change you directory to root level of project `cd simple-api-server`
+  * Change your directory to root level of project `cd simple-api-server`
   * Run the command `bash scripts\deploy.sh`
-  * This script will get you public IP address and SSH is allowed only from you IP address and ELB is also allowed only from you IP address.
-  * This script will ask for you public key, so we can import the same key into AWS account and login into EC2 Intance if needed.
+  * This script will get your public IP address and SSH is allowed only from your IP address and ELB is also allowed only from your IP address.
+  * This script will ask for your public key, So we can import the same key into AWS account and login into EC2 Intance if needed.
   * If you dont have one yet, create it by `ssh-keygen`
   * Once you run the script it will show the deployment of the infrastructure, at the end it will output the ELB address to access and Bastion IP to connect to bastion. SSH-key and Profile are recorded to use them during destroy process.
 
@@ -40,7 +40,6 @@ All application logs, POST requests and responses are logged to location `/var/l
 * Destroy the infrastructure
   * Once you are done with testing make sure you destroy the infra
   * To destroy the infra you can run `bash scripts/destroy.sh`
-
 
 Note : you need to all of these scripts from the root directory only. make sure you configured profile correctly.
 
