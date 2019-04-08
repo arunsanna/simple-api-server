@@ -36,5 +36,5 @@ variable "ami-id" {
 }
 
 variable "myip-address" {
-  default = "144.217.198.17/32"
+  default = "144.217.15.171/32"
 }
