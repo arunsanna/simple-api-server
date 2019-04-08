@@ -10,8 +10,6 @@ read LOCAL_KEYPAIR_PATH
 echo "provide the profile name that you configured in aws configure"
 read PROFILE
 
-#read the input to destroy or deploy
-
 # create ssh-key pair if there is not keypair in the local machine using awscli
 aws ec2 import-key-pair --key-name $KEYPAIR --public-key-material file://$LOCAL_KEYPAIR_PATH --profile $PROFILE
 
