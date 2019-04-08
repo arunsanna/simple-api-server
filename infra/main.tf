@@ -2,6 +2,7 @@
 provider "aws" {
   version = "~> 1.24.0"
   region = "${var.region}"
+  profile = "${var.profile}"
 }
 
 data "aws_caller_identity" "current" {}

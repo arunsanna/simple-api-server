@@ -28,5 +28,5 @@ def get_builds():
     output = get_latest_build(builds)
     return output, 200
 
-logging.basicConfig(filename='error.log',level=logging.DEBUG)
+logging.basicConfig(filename='/var/log/api-server.log',level=logging.DEBUG)
 app.run(debug=True, host='0.0.0.0', port='80')

@@ -1,6 +1,8 @@
 #!/bin/bash
+cd infra &&
+XELB_ADDRESS=$(terraform output elb_address)
 curl -X POST \
-  http://<xelb-address>/builds \
+  http://$XELB_ADDRESS/builds \
   -H 'Content-Type: application/json' \
   -H 'Postman-Token: 34f53276-4b72-4567-a56b-ca57e2bb556f' \
   -H 'cache-control: no-cache' \
