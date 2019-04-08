@@ -26,7 +26,7 @@ All application logs, POST requests and responses are logged to location `/var/l
 
 * Deploy the infrastructure
   * Change your directory to root level of project `cd simple-api-server`
-  * Run the command `bash scripts\deploy.sh`
+  * Run the command `bash scripts/deploy.sh`
   * This script will get your public IP address and SSH is allowed only from your IP address and ELB is also allowed only from your IP address.
   * This script will ask for your public key, So we can import the same key into AWS account and login into EC2 Intance if needed.
   * If you dont have one yet, create it by `ssh-keygen`
