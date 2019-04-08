@@ -1,5 +1,5 @@
 infra/.terraform/
 .DS_Store
 app/*.log
-/infra/*.tfstate
+/infra/*.tfstate*
 /infra/*.backup
