@@ -5,7 +5,7 @@ This is a small application deployment, which will respond to POST API calls, In
 
 goal is to get the latest build details AMI-ID, Date and Hash from the provided json payload.
 
-Application is writeen in Python, used flask library. This application is now serving only the POST requests and application runs on port 80.
+Application is written in Python, used flask library. This application is now serving only the POST requests and application runs on port 80.
 
 All application logs, POST requests and responses are logged to location `/var/log/api-server.log`
 
