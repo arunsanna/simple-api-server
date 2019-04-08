@@ -13,4 +13,4 @@ sudo pip install flask-restful &&
 sudo git clone https://github.com/arunsanna/simple-api-server.git /opt/ &&
 
 # now run the app code.
-#sudo /usr/bin/python /opt/app/app.py
+nohup python /opt/app/app.py 2>&1 &
