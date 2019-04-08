@@ -1,4 +1,4 @@
-# simple-api-server
+# Project : Simple-API-Server
 
 # Description
 This is a small application deployment, which will respond to POST API calls, In this use-case, we send a JSON payload contains multiple JSON Object contain info related to builds, which are created at mulitple time intervals.
