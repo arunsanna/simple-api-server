@@ -7,10 +7,13 @@ sudo yum -y install git &&
 sudo easy_install pip &&
 
 # install flask restful-api
+echo "installing restful-api" >> app.out &&
 sudo pip install flask-restful &&
 
 # clone the repo
+echo "cloning the repo" >> app.out &&
 sudo git clone https://github.com/arunsanna/simple-api-server.git /opt/ &&
+echo "completed cloning" >> app.out &&
 
 # now run the app code.
-#sudo /usr/bin/python /opt/app/app.py
+nohup python /opt/app/app.py 2>&1 &
