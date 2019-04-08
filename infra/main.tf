@@ -59,7 +59,7 @@ resource "aws_security_group_rule" "all-egress-rule" {
 }
 
 resource "aws_subnet" "pub" {
-  availability_zone = "${var.avalibity_zone}"
+  availability_zone = "${var.availability_zone}"
   vpc_id            = "${aws_vpc.vpc.id}"
   cidr_block        = "${cidrsubnet(var.vpc_cidr_block, var.cidr_bits,1)}"
 
@@ -71,7 +71,7 @@ resource "aws_subnet" "pub" {
 }
 
 resource "aws_subnet" "priv" {
-  availability_zone = "${var.avalibity_zone}"
+  availability_zone = "${var.availability_zone}"
   vpc_id            = "${aws_vpc.vpc.id}"
   cidr_block        = "${cidrsubnet(var.vpc_cidr_block, var.cidr_bits,2)}"
 

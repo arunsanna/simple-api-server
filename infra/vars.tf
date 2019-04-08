@@ -18,7 +18,7 @@ variable "cidr_bits" {
   default = 8
 }
 
-variable "avalibity_zone" {
+variable "availability_zone" {
   default = "us-west-1a"
 }
 
