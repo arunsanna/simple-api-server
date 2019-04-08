@@ -1,9 +1,9 @@
 # simple-api-server
 
 # Description
-This is a small application deployment, which will respond to POST API calls, In this use case we send a JSON payload contains of JSON Object contain data related to builds, which are created at mulitple time intervals.
+This is a small application deployment, which will respond to POST API calls, In this use-case, we send a JSON payload contains multiple JSON Object contain info related to builds, which are created at mulitple time intervals.
 
-goal is to get the latest build from the provided json payload.
+goal is to get the latest build details AMI-ID, Date and Hash from the provided json payload.
 
 Application is writeen in Python, used flask library. This application is now serving only the POST requests and application runs on port 80.
 
@@ -12,16 +12,16 @@ All application logs, POST requests and responses are logged to location `/var/l
 # Architecture Diagram
 ![Architecture](architecture.png)
 
-#Prerequesites
+# Prerequesites
   1. install git
   2. insall awscli
   3. configure your credentials to profile by `aws configure --profile PROFILENAME`
   4. install terraform
 
-#Deployment guidelines
+# Deployment guidelines
 
 * clone the project
-  * This is a public repo no credentials are hardcoded.
+  * This is a public repo, dont worry no credentials are hardcoded.
   * `git clone git@github.com:arunsanna/simple-api-server.git` 
 
 * deploy the infrastructure
