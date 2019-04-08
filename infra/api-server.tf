@@ -49,7 +49,7 @@ resource "aws_instance" "api-server" {
   vpc_security_group_ids = ["${aws_security_group.api-server-sg.id}"]
   subnet_id = "${aws_subnet.priv.id}"
   associate_public_ip_address = false
-
+  user_data = "user-data/api-app.sh.tpl"
   tags {
     CreatedBy      = "${var.owner}"
     Name           = "${var.project}-API-Server"
