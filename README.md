@@ -15,7 +15,7 @@ All application logs, POST requests and responses are logged to location `/var/l
 # Prerequesites
   1. Install git
   2. Insall awscli
-  3. Configure your credentials to profile by `aws configure --profile PROFILENAME`
+  3. Configure your credentials to profile by `aws configure --profile PROFILE-NAME`
   4. Install terraform
 
 # Deployment guidelines
