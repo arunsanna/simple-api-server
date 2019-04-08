@@ -44,7 +44,7 @@ resource "aws_security_group_rule" "api-server-egress" {
 resource "aws_instance" "api-server" {
   ami           = "${var.ami-id}"
   instance_type = "${var.instance-type}"
-  availability_zone = "${var.avalibity_zone}"
+  availability_zone = "${var.availability_zone}"
   key_name = "${var.keypair}"
   vpc_security_group_ids = ["${aws_security_group.api-server-sg.id}"]
   subnet_id = "${aws_subnet.priv.id}"

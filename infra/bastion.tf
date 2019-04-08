@@ -34,7 +34,7 @@ resource "aws_security_group_rule" "bastion-egress" {
 resource "aws_instance" "bastion" {
   ami           = "${var.ami-id}"
   instance_type = "${var.instance-type}"
-  availability_zone = "${var.avalibity_zone}"
+  availability_zone = "${var.availability_zone}"
   key_name = "${var.keypair}"
   vpc_security_group_ids = ["${aws_security_group.bastion-sg.id}"]
   subnet_id = "${aws_subnet.pub.id}"
