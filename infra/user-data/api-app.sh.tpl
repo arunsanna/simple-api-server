@@ -10,7 +10,7 @@ sudo easy_install pip &&
 sudo pip install flask-restful &&
 
 # clone the repo
-sudo git clone https://github.com/arunsanna/simple-api-server.git /opt/&&
+sudo git clone https://github.com/arunsanna/simple-api-server.git /opt/ &&
 
 # now run the app code.
-sudo /usr/bin/python /opt/simple-api-server/app.py
+sudo /usr/bin/python /opt/simple-api-server/app/app.py
