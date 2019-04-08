@@ -13,33 +13,33 @@ All application logs, POST requests and responses are logged to location `/var/l
 ![Architecture](architecture.png)
 
 # Prerequesites
-  1. install git
-  2. insall awscli
-  3. configure your credentials to profile by `aws configure --profile PROFILENAME`
-  4. install terraform
+  1. Install git
+  2. Insall awscli
+  3. Configure your credentials to profile by `aws configure --profile PROFILENAME`
+  4. Install terraform
 
 # Deployment guidelines
 
-* clone the project
+* Clone the project
   * This is a public repo, dont worry no credentials are hardcoded.
   * `git clone git@github.com:arunsanna/simple-api-server.git` 
 
-* deploy the infrastructure
-  * change you directory to root level of project `cd simple-api-server`
-  * run the command `bash scripts\deploy.sh`
+* Deploy the infrastructure
+  * Change you directory to root level of project `cd simple-api-server`
+  * Run the command `bash scripts\deploy.sh`
   * This script will get you public IP address and SSH is allowed only from you IP address and ELB is also allowed only from you IP address.
   * This script will ask for you public key, so we can import the same key into AWS account and login into EC2 Intance if needed.
   * If you dont have one yet, create it by `ssh-keygen`
-  * once you run the script it will show the deployment of the infrastructure, at the end it will output the ELB address to access and Bastion IP to connect to bastion. SSH-key and Profile are recorded to use them during destroy process.
+  * Once you run the script it will show the deployment of the infrastructure, at the end it will output the ELB address to access and Bastion IP to connect to bastion. SSH-key and Profile are recorded to use them during destroy process.
 
-* test the API
-  * to test the API, you need to wait until XELB passes the health check, if not it wont allow traffic to the server.
-  * once ELB health check is passed you can run this script by command `bash scripts/test.sh`
+* Test the API
+  * To test the API, you need to wait until XELB passes the health check, if not it wont allow traffic to the server.
+  * Once ELB health check is passed you can run this script by command `bash scripts/test.sh`
   * This will return as json with AMI-ID, Date and hash related to latest build.
 
-* destroy the infrastructure
-  * once you are done with testing make sure you destroy the infra
-  * to destroy the infra you can run `bash scripts/destroy.sh`
+* Destroy the infrastructure
+  * Once you are done with testing make sure you destroy the infra
+  * To destroy the infra you can run `bash scripts/destroy.sh`
 
 
 Note : you need to all of these scripts from the root directory only. make sure you configured profile correctly.
